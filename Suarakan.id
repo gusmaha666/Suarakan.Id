@@ -143,7 +143,6 @@
       <div><strong id="user-info">Belum login</strong></div>
     </div>
 
-    <!-- Menu dengan penjelasan -->
     <nav>
       <button onclick="switchTab('berani')" class="active">
         #SuaraBerani<br>
@@ -162,6 +161,9 @@
     <div class="content">
       <div class="message-form">
         <h2>Tulis Suaramu</h2>
+        <p id="formDescription" style="font-style: italic; color: #555;">
+          Lawan Bullying, curhatkan isi hati dan beri dukungan pada sesama!
+        </p>
         <textarea id="userInput" placeholder="Tulis pesanmu di sini..."></textarea>
         <br>
         <label><input type="checkbox" id="anon"> Kirim secara anonim</label>
@@ -220,6 +222,17 @@
       currentTab = tab;
       document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
       document.querySelector(`nav button[onclick="switchTab('${tab}')"]`).classList.add('active');
+
+      // Ubah deskripsi di bawah "Tulis Suaramu"
+      const formDesc = document.getElementById('formDescription');
+      if (tab === 'berani') {
+        formDesc.textContent = 'Lawan Bullying, curhatkan isi hati dan beri dukungan pada sesama!';
+      } else if (tab === 'aspirasi') {
+        formDesc.textContent = 'Sampaikan kritik dan saran untuk perubahan yang lebih baik pada komunitasmu!';
+      } else if (tab === 'cerita') {
+        formDesc.textContent = 'Bagikan pengalaman positif dan inspiratif yang kamu miliki bersama orang-orang dilingkunganmu!';
+      }
+
       displayMessages();
     }
 
