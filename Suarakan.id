@@ -138,11 +138,17 @@
       <div><strong id="user-info">Belum login</strong></div>
     </div>
 
-    <nav>
-      <button onclick="switchTab('berani')" class="active">#SuaraBerani</button>
-      <button onclick="switchTab('aspirasi')">#SuaraAspirasi</button>
-      <button onclick="switchTab('cerita')">#SuaraCerita</button>
-    </nav>
+  <nav>
+  <button onclick="switchTab('berani')" class="active">
+    #SuaraBerani<br><small>Lawan Bullying, curhatkan isi hati dan beri dukungan pada sesama!</small>
+  </button>
+  <button onclick="switchTab('aspirasi')">
+    #SuaraAspirasi<br><small>Sampaikan kritik dan saran untuk perubahan yang lebih baik!</small>
+  </button>
+  <button onclick="switchTab('cerita')">
+    #SuaraCerita<br><small>Bagikan pengalaman positif dan inspiratif!</small>
+  </button>
+</nav>
 
     <!-- Deskripsi Dinamis -->
     <div class="tab-description" id="tabDescription">
